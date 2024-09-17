@@ -46,3 +46,57 @@
 
 # #With Using built-in functions
 # print("Maximum element is: {0}\nMinimum element is: {1}\nSum of all elements is: {2}".format(max(ls),min(ls),sum(ls)))
+
+#(6.)Sorting list elements in ascending order
+# ls=[90,-89,34,23,-45,-1,0,-20,64,-76,-32,-21,0,234,-99]
+# #Without using built-in functions(Bubble sort)
+# def swap_values(a,b):
+#     return b,a
+
+# def print_list(ls,name='List'):
+#     if len(ls)!=0:
+#         print(name,"is: ")
+#         for i in range(len(ls)):
+#             print(ls[i])
+#     else:
+#         print(name,"is empty")
+        
+# for i in range(len(ls)):
+#     for j in range(i+1):
+#         if ls[i]<ls[j]:
+#             ls[i],ls[j]=swap_values(ls[i],ls[j])
+            
+# print_list(ls,'After sorting in ascending order List')
+
+# #(7.) Sorting list elements in descending order
+# for i in range(len(ls)):
+#     for j in range(i+1):
+#         if ls[i]>ls[j]:
+#             ls[i],ls[j]=swap_values(ls[i],ls[j])
+            
+# print_list(ls,'After sorting in descending order List')
+
+#(8.) Finding second largest element of list
+# for i in range(len(ls)):
+#     for j in range(i+1):
+#         if ls[i]<ls[j]:
+#             ls[i],ls[j]=swap_values(ls[i],ls[j])
+# print("Second largest element in list is:",ls[(len(ls)-2)])
+
+#(9.) Sorting List elements with using .sort() function
+# ls=[90,-89,34,23,-45,-1,0,-20,64,-76,-32,-21,0,234,-99]
+# #List in ascending order
+# ls.sort()
+# print(ls)
+# ls=sorted(ls)
+# print(ls)
+# #List in descending order
+# ls.sort(reverse=True)
+# print(ls)
+# ls=sorted(ls,reverse=True)
+# print(ls)
+
+#(10.) Finding second largest element in list using built-in function
+# ls=[90,-89,34,23,-45,-1,0,-20,64,-76,-32,-21,0,234,-99]
+# ls.sort(reverse=True)
+# print("Second largest list element is:",ls[1])
