@@ -4,7 +4,7 @@ num=[]
 while True:
     print("""
         -----------List Operatons-----------
-        Press 1 for inseting element in list
+        Press 1 for inserting element in list
         Press 2 for updating element in list
         Press 3 for deleting element from list
         Press 4 for searching element in list
