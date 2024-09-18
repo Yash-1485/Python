@@ -100,3 +100,17 @@
 # ls=[90,-89,34,23,-45,-1,0,-20,64,-76,-32,-21,0,234,-99]
 # ls.sort(reverse=True)
 # print("Second largest list element is:",ls[1])
+
+#(11.)Find odd and even elements, also count no. of elements and their sum
+ls=[i for i in range(1,11)]
+print(type(ls))
+sum_even,sum_odd,count_even,count_odd=0,0,0,0
+for x in ls:
+    if x%2==0:
+        count_even+=1
+        sum_even+=x
+    else:
+        count_odd+=1
+        sum_odd+=x
+print("No. of odd elements are",count_odd,"And their sum is:",sum_odd)
+print("No. of even elements are",count_even,"And their sum is:",sum_even)
