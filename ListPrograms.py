@@ -114,3 +114,118 @@
 #         sum_odd+=x
 # print("No. of odd elements are",count_odd,"And their sum is:",sum_odd)
 # print("No. of even elements are",count_even,"And their sum is:",sum_even)
+
+#Two Dimentional List
+# (12.)Sum of Two Dimetional Lists
+# a=[[1,2,3],[4,5,6],[7,8,9]]
+# b=[[1,2,3],[4,5,6],[7,8,9]]
+# a=eval(input("Enter the First List: "))
+# b=eval(input("Enter the Second List: "))
+
+# if len(a)==len(b) and len(a[0])==len(b[0]):
+#     c=[]
+#     #Sum of Elements
+#     for i in range(len(a)):
+#         row=[]
+#         for j in range(len(a[i])):
+#             row.append(a[i][j]+b[i][j])
+#         c.append(row)
+#     #Printing Final List
+#     print("Final list after summation is: ")
+#     for i in range(len(c)):
+#         for j in range(len(c[i])):
+#             print(c[i][j],end=' ')
+#         print()
+# else:
+#     print("Invalid Input")
+    
+#(13.)Subtraction of two dimentional lists
+# a=eval(input("Enter the First List: "))
+# b=eval(input("Enter the Secondt List: "))
+
+# if len(a)==len(b) and len(a[0])==len(b[0]):
+#     c=[]
+#     #Sum of Elements
+#     for i in range(len(a)):
+#         row=[]
+#         for j in range(len(a[i])):
+#             row.append(a[i][j]-b[i][j])
+#         c.append(row)
+#     #Printing Final List
+#     print("Final list after summation is: ")
+#     for i in range(len(c)):
+#         for j in range(len(c[i])):
+#             print(c[i][j],end=' ')
+#         print()
+# else:
+#     print("Invalid Input")
+    
+#(14.)Multiplication of Lists
+def input_2D_list(name='List'):
+    print("Enter for",name,": ")
+    row=int(input("Enter Numbers of Rows: "))
+    col=int(input("Enter Numbers of Columns: "))
+    ls=[]
+    print("Enter {0} elements for {1}: ".format((row*col),name))
+    for i in range(row):
+        row=[]
+        for j in range(col):
+            row.append(int(input(f"Enter ls[{i}][{j}]: ")))
+        ls.append(row)
+    return ls
+
+def print_2D_list(ls,name='List'):
+    print(name,"is: ")
+    for i in range(len(ls)):
+        for j in range(len(ls[i])):
+            print(ls[i][j],end=' ')
+        print()
+
+def multiply_2D_lists(a,b):
+    c=[]
+    if len(a[0])==len(b):
+        mul=[]
+        row=len(a)
+        col=len(b[0])
+        for i in range(row):
+            row=[]
+            for j in range(col):
+                x=0
+                for k in range(len(a[0])):
+                   x+=a[i][k]+b[k][j]
+                row.append(x)
+            mul.append(row)
+        return mul 
+    else:
+        print("Invalid List input")
+        
+# a=input_2D_list("List a")
+# print_2D_list(a,"List a")
+# b=input_2D_list("List b")
+# print_2D_list(b,"List b")
+# c=multiply_2D_lists(a,b)
+# print_2D_list(c,"Final List")
+
+#(15.)Finding Maximum and minimum elements from 2D Lists
+# a=input_2D_list('List a')
+# print_2D_list(a,'List a')
+# max=a[0][0]
+# min=a[0][0]
+
+# for i in range(len(a)):
+#     for j in range(len(a[0])):
+#         if a[i][j]>max:max=a[i][j]
+#         elif a[i][j]<min:min=a[i][j]
+# print("Maximum element is:",max)
+# print("Minimum element is:",min)
+
+#(16.)Transpose of matrix
+# a=input_2D_list('List a')
+# b=[]
+# for i in range(len(a[0])):
+#     row=[]
+#     for j in range(len(a)):
+#         row.append(a[j][i])
+#     b.append(row)
+# print_2D_list(a,"Original List")
+# print_2D_list(b,"Transposed List")
