@@ -256,3 +256,25 @@ def multiply_2D_lists(a,b):
 # print("Total no. positive numbers:",countpos)
 # print("Total no. negetive numbers:",countneg)
 # print("Total no. zero numbers:",countzero)
+
+#(18.)Upper triangular matrix and sum of those elements
+a=input_2D_list('List a')
+sum=0
+print("Upper triangular matrix: ")
+for i in range(len(a)):
+    for k in range(0,i):
+        print(end='  ')
+    for j in range(i,len(a[i])):
+        print(a[i][j],end=' ')
+        sum+=a[i][j]
+    print()
+print("Sum of elements of upper triangular matrix is:",sum)
+#(19.)Lower triangular matrix and sum of those elements
+sum=0
+print("Lower triangular matrix: ")
+for i in range(len(a)):
+    for j in range(0,i+1):
+        print(a[i][j],end=' ')
+        sum+=a[i][j]
+    print()
+print("Sum of elements of lower triangular matrix is:",sum)
