@@ -254,3 +254,14 @@ n=5
 #             print(count,end='')
 #             count+=1
 #     print()
+
+#Pascal's Triangle
+c=0
+for i in range(1,n+1):
+    c=1
+    for k in range(n,i,-1):
+        print(end=' ')
+    for j in range(1,i+1):
+        print(c,end=' ')
+        c=(int)(c*(i-j)/j)
+    print()
