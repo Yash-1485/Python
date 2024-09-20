@@ -229,3 +229,18 @@ def multiply_2D_lists(a,b):
 #     b.append(row)
 # print_2D_list(a,"Original List")
 # print_2D_list(b,"Transposed List")
+
+#(16.)Transpose of Matrix-Another Method
+# a=input_2D_list("List a")
+# b=[]
+# for i in range(len(a[0])):
+#     row=[]
+#     for j in range(len(a)):
+#         row.append(0)
+#     b.append(row)
+
+# for i in range(len(a)):
+#     for j in range(len(a[i])):
+#         b[j][i]=a[i][j]
+# print_2D_list(a,"List a")
+# print_2D_list(b,"Transposed - List b")
