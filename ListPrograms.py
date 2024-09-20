@@ -192,7 +192,7 @@ def multiply_2D_lists(a,b):
             for j in range(col):
                 x=0
                 for k in range(len(a[0])):
-                   x+=a[i][k]+b[k][j]
+                    x+=a[i][k]+b[k][j]
                 row.append(x)
             mul.append(row)
         return mul 
@@ -257,24 +257,79 @@ def multiply_2D_lists(a,b):
 # print("Total no. negetive numbers:",countneg)
 # print("Total no. zero numbers:",countzero)
 
-#(18.)Upper triangular matrix and sum of those elements
-a=input_2D_list('List a')
-sum=0
-print("Upper triangular matrix: ")
-for i in range(len(a)):
-    for k in range(0,i):
-        print(end='  ')
-    for j in range(i,len(a[i])):
-        print(a[i][j],end=' ')
-        sum+=a[i][j]
-    print()
-print("Sum of elements of upper triangular matrix is:",sum)
-#(19.)Lower triangular matrix and sum of those elements
-sum=0
-print("Lower triangular matrix: ")
-for i in range(len(a)):
-    for j in range(0,i+1):
-        print(a[i][j],end=' ')
-        sum+=a[i][j]
-    print()
-print("Sum of elements of lower triangular matrix is:",sum)
+#(18.)Check for square matrix
+def check_square_matrix(ls,name='List'):
+    return (len(ls)==len(ls[0]))
+
+# a=input_2D_list('List a')
+# print(check_square_matrix(a,'List a'))
+
+# (19.)Upper triangular matrix and sum of those elements
+# a=input_2D_list('List a')
+# if(check_square_matrix(a)):
+    
+#     sum=0
+#     print("Upper triangular matrix: ")
+#     for i in range(len(a)):
+#         for k in range(0,i):
+#             print(end='0 ')
+#         for j in range(i,len(a[i])):
+#             print(a[i][j],end=' ')
+#             sum+=a[i][j]
+#         print()
+#     print("Sum of elements of upper triangular matrix is:",sum)
+# #(20.)Lower triangular matrix and sum of those elements
+#     sum=0
+#     print("Lower triangular matrix: ")
+#     for i in range(len(a)):
+#         for j in range(0,i+1):
+#             print(a[i][j],end=' ')
+#             sum+=a[i][j]    
+#         for k in range(i+1,len(a)):
+#             print(end='0 ')
+#         print()
+#     print("Sum of elements of lower triangular matrix is:",sum)
+# else:
+#     print("Given matrix is not a square matrix")
+
+#(21.)Check for Symmetric matrix
+def check_symmetric_matrix(ls1,ls2,name1='List1',name2='List2'):
+    if(check_square_matrix(ls1)):
+        if(check_square_matrix(ls2)):
+            if (len(ls1)==len(ls2) or len(ls1[0])==len(ls2[0])):
+                for i in range(len(ls1)):
+                    for j in range(len(ls1[i])):
+                        if ls1[i][j]!=ls2[j][i]:
+                            return False
+                return True
+            else:
+                return False
+        else:
+            # print(f"{name2} is not a square matrix")
+            return False
+    else:
+        # print(f"{name1} is not a square matrix")
+        return False
+# a=input_2D_list('List a')
+# b=input_2D_list('List b')
+# print(check_symmetric_matrix(a,b))
+
+# (22.)Check for Identity matrix
+def check_identity_matrix(ls,name='List2'):
+    if(check_square_matrix(ls)):
+        for i in range(len(ls)):
+            for j in range(len(ls[i])):
+                if(i==j):
+                    if(ls[i][j]!=1):
+                        return False
+                else:
+                    if(ls[i][j]!=0):
+                        return False
+        return True
+    else:
+        # print(f"{name} is not a square matrix")
+        return False
+
+# a=input_2D_list('List a')
+# print_2D_list(a,'List a')
+# print(check_identity_matrix(a,'List a'))
