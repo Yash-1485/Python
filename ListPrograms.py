@@ -244,3 +244,15 @@ def multiply_2D_lists(a,b):
 #         b[j][i]=a[i][j]
 # print_2D_list(a,"List a")
 # print_2D_list(b,"Transposed - List b")
+
+#(17.)Cont Positive, Negative and Zeros
+# countpos,countneg,countzero=0,0,0
+# a=input_2D_list('List a')
+# for i in range(len(a)):
+#     for j in range(len(a[i])):
+#         if (a[i][j]>0):countpos+=1
+#         elif (a[i][j]<0):countneg+=1
+#         else:countzero+=1
+# print("Total no. positive numbers:",countpos)
+# print("Total no. negetive numbers:",countneg)
+# print("Total no. zero numbers:",countzero)
