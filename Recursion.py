@@ -19,6 +19,18 @@
 # ans=fact(8)
 # print("Factorial of given number is:",ans)
 
+#Factorials upto n numbers
+# def factorial(n,count=1,fact=1):
+#     if(count>=n):
+#         fact*=count
+#         print(count,"\b! = ",fact)
+#         return
+#     fact*=count
+#     print(count,"\b! = ",fact)
+#     factorial(n,count+1,fact)
+
+# factorial(20)
+
 # def fact_num(n):
 #     if(n==0 or n==1): return 1
 #     return fact_num(n-1) * n
