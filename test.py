@@ -5,3 +5,5 @@ import Modules.Calculator as calc
 # print(calc.division(4,3))
 # print(calc.modulation(10,4))
 # print(calc.power(100,0))
+import Modules.Pattern as pt
+# pt.tr_pattern(obj=1,bt_space=' ',bf_space=' ')
